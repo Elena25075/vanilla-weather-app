@@ -1,7 +1,54 @@
 .main {
+  position: relative;
   max-width: 600px;
   margin: 0 auto;
   margin-top: 30px;
-  border: 1px solid #000;
+  border: 0px solid #000;
+  border-radius: 10px;
   font-family: "Work Sans", sans-serif;
+  backdrop-filter: blur(10px);
+  background: rgba(49, 143, 198, 0.15);
+}
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+ul {
+  margin-left: 20px;
+  list-style-type: none;
+  padding: 0px;
+}
+li {
+  display: block;
+}
+h1 {
+  font-size: 3rem;
+  padding: 0px;
+  margin: 0px;
+  margin-left: 20px;
+}
+.temprature {
+  margin: 0px;
+  padding: 0px;
+  margin-left: 20px;
+}
+.index-temperature {
+  font-size: 4rem;
+  margin: 0px;
+  padding: 0px;
+}
+.unit-temperature {
+  font-size: 1.5rem;
+  position: relative;
+  top: -25px;
+}
+.wrap-1 {
+  margin-top: 10px;
+}
+.main-icon {
+  margin-top: 20px;
+  max-width: 100px;
 }
