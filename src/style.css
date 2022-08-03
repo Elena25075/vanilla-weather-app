@@ -1,4 +1,7 @@
-.wrap {
+.main {
+  max-width: 600px;
   margin: 0 auto;
+  margin-top: 30px;
   border: 1px solid #000;
+  font-family: "Work Sans", sans-serif;
 }
