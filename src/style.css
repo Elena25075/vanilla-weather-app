@@ -23,6 +23,8 @@ ul {
 }
 li {
   display: block;
+}
+li::first-letter {
   text-transform: capitalize;
 }
 h1 {
