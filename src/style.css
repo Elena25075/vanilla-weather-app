@@ -23,12 +23,16 @@ ul {
 }
 li {
   display: block;
+  text-transform: capitalize;
 }
 h1 {
   font-size: 3rem;
   padding: 0px;
   margin: 0px;
   margin-left: 20px;
+}
+a {
+  text-decoration: none;
 }
 .temprature {
   margin: 0px;

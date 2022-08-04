@@ -27,10 +27,10 @@
     <div class="container">
       <div class="row main">
         <div class="col-6 wrap-1">
-          <h1>Rome</h1>
+          <h1 id="city">Rome</h1>
           <div class="temprature">
-            <span class="index-temperature">30</span>
-            <span class="unit-temperature">°C | °F </span>
+            <span class="index-temperature" id="temprature">30</span>
+            <span class="unit-temperature">°C |<a href="#"> °F</a> </span>
           </div>
         </div>
         <div class="col-6">
@@ -45,13 +45,13 @@
           <div class="col-6">
             <ul>
               <li>Wednesday 19:19</li>
-              <li>Mostly sunny</li>
+              <li id="weather">Mostly sunny</li>
             </ul>
           </div>
           <div class="col-6">
             <ul>
-              <li>Humidity: 59%</li>
-              <li>Wind: 6 km/h</li>
+              <li>Humidity: <span id="humidity">59</span>%</li>
+              <li>Wind: <span id="wind">6</span> km/h</li>
             </ul>
           </div>
         </div>
