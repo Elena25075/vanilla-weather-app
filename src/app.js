@@ -14,11 +14,13 @@ function formatDate() {
     "Saturday",
   ];
 
-  if (minutes.toString().length > 1) {
-    return (userDate.innerHTML = `${days[day]} ${hours}:${minutes}`);
-  } else {
-    return (userDate.innerHTML = `${days[day]} ${hours}:0${minutes}`);
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
   }
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  userDate.innerHTML = `${days[day]} ${hours}:${minutes}`;
 }
 
 function displayTemperature(response) {
@@ -39,6 +41,10 @@ function displayTemperature(response) {
   let wind = document.querySelector("#wind");
   let currentWind = Math.round(response.data.wind.speed);
   wind.innerHTML = currentWind;
+  let icon = document.querySelector("#icon");
+  let iconIndex = response.data.weather[0].icon;
+  let iconUrl = `src/images/icons/${iconIndex}.png`;
+  icon.setAttribute("src", iconUrl);
   formatDate();
 }
 
