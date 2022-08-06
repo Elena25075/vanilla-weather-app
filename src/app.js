@@ -52,10 +52,23 @@ function showCurrentTime(response) {
   console.log(new Date(response.data.dt * 1000));
 }
 
+function search(event) {
+  event.preventDefault();
+  let userCity = document.querySelector("#userCity");
+  let apiKey = "fd796e85e2a0e40f557a4de490967886";
+  let cityName = userCity.value;
+  let units = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayTemperature);
+  axios.get(apiUrl).then(showCurrentTime);
+}
+
 let apiKey = "fd796e85e2a0e40f557a4de490967886";
 let cityName = "Lviv";
 let units = "metric";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=${units}`;
-console.log(apiUrl);
 axios.get(apiUrl).then(displayTemperature);
 axios.get(apiUrl).then(showCurrentTime);
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", search);
