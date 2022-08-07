@@ -46,10 +46,12 @@ h1 {
   margin-left: 20px;
 }
 a {
-  color: rgb(206, 229, 248);
+  color: rgb(138, 196, 247);
   text-decoration: none;
 }
-
+a:hover {
+  color: aliceblue;
+}
 .button {
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
