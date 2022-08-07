@@ -45,6 +45,11 @@ function displayTemperature(response) {
   let iconIndex = response.data.weather[0].icon;
   let iconUrl = `src/images/icons/${iconIndex}.png`;
   icon.setAttribute("src", iconUrl);
+  let bgImageUrl = `src/images/bg/${iconIndex}.png`;
+  let bgImage = document.querySelector("img");
+
+  bgImage.setAttribute("src", bgImageUrl);
+
   formatDate();
 }
 
