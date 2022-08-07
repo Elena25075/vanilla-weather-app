@@ -25,56 +25,71 @@
   <body>
     <img id="bg" src="" class="bg" alt="" />
     <div class="container">
-      
+      <div class="wrapper">
         <form id="search-form">
           <div class="row search-box">
             <div class="col-9">
-            <input
-              class="form-control form"
-              type="search"
-              placeholder="Enter city"
-              id="userCity"
-            />
+              <input
+                class="form-control form"
+                type="search"
+                placeholder="Enter city"
+                id="userCity"
+              />
+            </div>
+            <div class="col-3">
+              <input class="button" type="submit" value="Search" />
+            </div>
           </div>
-          <div class="col-3">
-            <input class="button" type="submit" value="Search" />
-          </div>
-          
         </form>
-      </div>
-      <div class="row main">
-        <div class="col-6 wrap-1">
-          <h1 id="city"></h1>
-          <div class="temprature">
-            <span class="index-temperature" id="temprature"></span>
-            <span class="unit-temperature"> <a class = "notActive" id = "celsius-link" href = "#"> °C</a> |<a id = "fahrenheit-link" href="#"> °F</a> </span>
-          </div>
-        </div>
-        <div class="col-6">
-          <img
-            id="icon"
-            class="main-icon"
-            src=""
-            alt="claudi"
-            class="src"
-          />
-        </div>
-        <div class="row">
-          <div class="col-6">
-            <ul>
-              <li id="date"><span id="day"></span> <span id="time"> </span></li>
-              <li id="weather"></li>
-            </ul>
+
+        <div class="row main">
+          <div class="col-6 wrap-1">
+            <h1 id="city"></h1>
+            <div class="temprature">
+              <span class="index-temperature" id="temprature"></span>
+              <span class="unit-temperature">
+                <a class="notActive" id="celsius-link" href="#"> °C</a> |<a
+                  id="fahrenheit-link"
+                  href="#"
+                >
+                  °F</a
+                >
+              </span>
+            </div>
           </div>
           <div class="col-6">
-            <ul>
-              <li>Humidity: <span id="humidity"></span>%</li>
-              <li>Wind: <span id="wind"></span> km/h</li>
-            </ul>
+            <img id="icon" class="main-icon" src="" alt="claudi" class="src" />
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <ul>
+                <li id="date">
+                  <span id="day"></span> <span id="time"> </span>
+                </li>
+                <li id="weather"></li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> km/h</li>
+              </ul>
+            </div>
           </div>
         </div>
+        <small>
+          This project was coded by Olena Kartoshkina and is
+          <a
+            class="github-link"
+            target="_blank"
+            href="https://github.com/Elena25075/vanilla-weather-app"
+          >
+            open-sourced on GitHub
+          </a>
+        </small>
       </div>
     </div>
+
     <script src="src/app.js"></script>
   </body>
 </html>

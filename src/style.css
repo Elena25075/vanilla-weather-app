@@ -21,6 +21,16 @@
   font-family: "Work Sans", sans-serif;
   color: aliceblue;
 }
+.wrapper {
+  position: relative;
+  max-width: 550px;
+  margin: 0 auto;
+  margin-top: 30px;
+  border: 0px solid #000;
+  border-radius: 25px;
+  font-family: "Work Sans", sans-serif;
+  color: aliceblue;
+}
 .bg {
   position: fixed;
   top: 0;
@@ -93,4 +103,14 @@ a:hover {
 
 .notActive:hover {
   color: aliceblue;
+}
+
+.github-link {
+  color: blue;
+  text-decoration: none;
+}
+
+.github-link:hover {
+  color: blue;
+  text-decoration: underline;
 }
