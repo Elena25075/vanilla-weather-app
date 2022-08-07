@@ -46,8 +46,10 @@ h1 {
   margin-left: 20px;
 }
 a {
+  color: rgb(206, 229, 248);
   text-decoration: none;
 }
+
 .button {
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
@@ -80,4 +82,13 @@ a {
 .main-icon {
   margin-top: 20px;
   max-width: 100px;
+}
+
+.notActive {
+  cursor: default;
+  color: aliceblue;
+}
+
+.notActive:hover {
+  color: aliceblue;
 }
