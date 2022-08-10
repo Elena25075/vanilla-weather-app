@@ -22,6 +22,13 @@ function formatDate() {
   }
   userDate.innerHTML = `${days[day]} ${hours}:${minutes}`;
 }
+function getForecast(coords) {
+  let apiKey = "e6862fbd2fc6c42df0db08834476aaa8";
+  let lon = coords.lon;
+  let lat = coords.lat;
+  let apiUrl = `api.openweathermap.org/data/2.5/forecast/daily?lat=${lat}&lon=${lon}&appid=${apiKey}`;
+  console.log(apiUrl);
+}
 
 function displayForecast() {
   let forecastElement = document.querySelector("#weather-forecast");
@@ -63,7 +70,6 @@ function displayTemperature(response) {
   temprature.innerHTML = currentTemprature;
 
   celsiusTemperture = response.data.main.temp;
-  displayForecast();
 
   let weather = document.querySelector("#weather");
   let currentWeather = response.data.weather[0].description;
@@ -84,6 +90,8 @@ function displayTemperature(response) {
   bgImage.setAttribute("src", bgImageUrl);
 
   formatDate();
+  getForecast(response.data.coord);
+  displayForecast();
 }
 
 function toFahrenheit(event) {
