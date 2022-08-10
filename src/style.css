@@ -114,16 +114,16 @@ a:hover {
   color: blue;
   text-decoration: underline;
 }
-.forcast-time {
+.forecast-time {
   margin-top: 5px;
   text-align: center;
 }
-.forcast-icon {
+.forecast-icon {
   display: block;
   margin: 0 auto;
   width: 40px;
 }
-.forcast-temperature {
+.forecast-temperature {
   text-align: center;
   font-size: 16px;
   margin-bottom: 5px;
