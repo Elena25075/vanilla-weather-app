@@ -83,8 +83,6 @@ function displayTemperature(response) {
   let temprature = document.querySelector("#temprature");
   temprature.innerHTML = currentTemprature;
 
-  celsiusTemperture = response.data.main.temp;
-
   let weather = document.querySelector("#weather");
   let currentWeather = response.data.weather[0].description;
   weather.innerHTML = currentWeather;
@@ -107,16 +105,6 @@ function displayTemperature(response) {
   getForecast(response.data.coord);
 }
 
-function toFahrenheit(event) {
-  event.preventDefault();
-  celcius.classList.remove("notActive");
-  fahrenheit.classList.add("notActive");
-
-  let temprature = document.querySelector("#temprature");
-  let fahrenheitTemperature = (celsiusTemperture * 9) / 5 + 32;
-  temprature.innerHTML = Math.round(fahrenheitTemperature);
-}
-
 function handleSubmit(event) {
   event.preventDefault();
   let userCity = document.querySelector("#userCity");
@@ -130,23 +118,7 @@ function search(cityName) {
   axios.get(apiUrl).then(displayTemperature);
 }
 
-function toCelsius(event) {
-  event.preventDefault();
-  celcius.classList.add("notActive");
-  fahrenheit.classList.remove("notActive");
-  let temprature = document.querySelector("#temprature");
-  temprature.innerHTML = Math.round(celsiusTemperture);
-}
-
-let celsiusTemperture = null;
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-
-let fahrenheit = document.querySelector("#fahrenheit-link");
-fahrenheit.addEventListener("click", toFahrenheit);
-
-let celcius = document.querySelector("#celsius-link");
-celcius.addEventListener("click", toCelsius);
 
 search("lviv");
