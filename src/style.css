@@ -8,8 +8,9 @@
   font-family: "Work Sans", sans-serif;
   color: aliceblue;
   text-shadow: 4px 4px 4px rgb(0 0 0 / 15%);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
   background: rgba(49, 143, 198, 0.15);
+  box-shadow: 4px 4px 15px rgb(0 0 0 / 10%);
 }
 .search-box {
   position: relative;
